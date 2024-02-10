@@ -106,20 +106,7 @@ jobs:
           name: ${{ runner.os }}
           path: project/build/package
 
-      - name: 📂 Upload to test server
-        uses: Dylan700/sftp-upload-action@latest
-        with:
-          server: ${{ secrets.HOST }}
-          port: ${{ secrets.PORT }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.PRIVATEKEY }}
-          uploads: |
-            ./project/build/package/ => /home/cs2/gameserver/game/csgo/
-          ignore: |
-              *.git
-              */**/*git*
-              *hl2sdk-cs2*
-              *metamod-source*
+      
       - name: 🗑️ Delete old workflow runs
         uses: Mattraks/delete-workflow-runs@v2
         with:
