@@ -3,7 +3,6 @@
 #include "CBaseFlex.h"
 #include "CBaseViewModel.h"
 
-//#include "CBodyComponent.h"
 #include "CPlayer_ItemServices.h"
 #include "CBodyComponentSkeletonInstance.h"
 
